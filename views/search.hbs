@@ -1,0 +1,15 @@
+    <div class="container">
+        <h2>Character search results for "{{searchName}}":</h2>
+    
+
+        <div class="row row-cols-5">
+            {{#each resultEntries}}
+            <a href="/characters/{{this.id}}">
+                {{!-- <div class="col"> --}}
+                <img class="img-thumbnail" src="{{this.thumbnail.path}}.{{this.thumbnail.extension}}" alt="">
+                <h5>{{this.name}}</h5>
+                {{!-- </div> --}}
+            </a>
+            {{/each}}
+        </div>
+    </div>
